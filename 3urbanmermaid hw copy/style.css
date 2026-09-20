@@ -1,0 +1,205 @@
+.bitcount-grid-double-ink-<uniquifier> {
+    font-family: "Bitcount Grid Double Ink", system-ui;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+    font-variation-settings:
+        "slnt" 0,
+        "CRSV" 0.5,
+        "ELSH" 0,
+        "ELXP" 0,
+        "SZP1" 0,
+        "SZP2" 0,
+        "XPN1" 0,
+        "XPN2" 0,
+        "YPN1" 0,
+        "YPN2" 0;
+}
+
+.purple-purse-regular {
+    font-family: "Purple Purse", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    color: rgb(50, 159, 162);
+    font-family: "Bitcount Grid Double Ink";
+    font-size: 64px;
+}
+
+body {
+    color: purple;
+    font-family: "Purple Purse";
+    text-align: center;
+    font-size: 24px;
+    margin: 1%;
+    padding: 0;
+    background-color: bisque;
+}
+
+.heading_block {
+    background-color: salmon;
+    padding: 10px;
+    text-align: center;
+    border-radius: 30px;
+    position:sticky;
+}
+
+.fav_places_titles {
+    display: flex;
+    flex-direction: row;
+    background-color: lightseagreen;
+    padding: 10px;
+    margin: 4px;
+    border-radius: 10px;
+    border-color: rgb(103, 175, 156);
+    border-style: groove;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.fav_places_title_card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: 8px;
+    border-radius: 10px;
+    background-color: turquoise;
+    border-color: mediumvioletred;
+    border-style: outset;
+    color:mediumvioletred;
+    font-size: 18px;
+}
+
+.flex_box_row {
+    background-color: lightcoral;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+}
+.flex_box_col {
+    background-color: lightcoral;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 4px;
+}
+
+.flex_box_row_3 {
+    flex-basis: 32%;
+}
+
+.flex_box_row_2 {
+    flex-basis: 45%;
+}
+
+img {
+    max-width: 100%;
+    max-height: fit-content;
+    margin:4px;
+    display: absolute;
+}
+
+footer {
+    font-size: small;
+}
+
+#backpack_out {
+    animation-iteration-count: 1;
+    animation-duration: 10s;
+    opacity:0;
+    transform: translateX(25h);
+    animation-name: backpack_out;
+    animation-fill-mode: forwards;
+}
+
+@keyframes backpack_out {
+    0% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity:0.5;
+        transform: translateX-(-25%);
+    }
+
+    100% {
+        opacity: 0;
+        transform: translateX(25%);
+
+    }
+}
+
+#backpack_in {
+    opacity: 0;
+    animation-iteration-count: 1;
+    animation-duration: 10s;
+    animation-delay: 5s;
+    animation-name: backpack_in;
+    animation-fill-mode: forwards;
+}
+
+@keyframes backpack_in {
+    0% {
+        opacity: 0;
+    }
+
+    75% {
+        opacity: 0.5
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(-50%);
+    }
+}
+
+#item_fill {
+    animation-name: bounce;
+    animation-duration: 15s;
+    animation-delay: 10s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards;
+}
+
+/* i'd like to have this translate towards center, but i wasn't fully understanding the instructions online for absolute positioning and left:0; etc - same for the backpack ones above */
+@keyframes bounce{
+    0% {
+    }
+    100% {
+        transform: translateY(-150%) translateX(80%);
+    }
+}
+
+
+.fav_places {
+    width: 100%;
+}
+
+.places_img {
+    width: 24%;
+    opacity: 0%;
+    display: inline-block;
+    transition: opacity 0.8s ease-in-out;
+}
+
+.backpack_button {
+    background-color: lemonchiffon;
+    color: cornflowerblue;
+    border-radius: 12px;
+    border-color: papayawhip;
+    border-style:double;
+    border-width: 10px;
+    width: 50vh;
+    font-size: 24px;
+    padding: 10px;
+    margin: 10px;
+    font-family: "Purple Purse";
+}
