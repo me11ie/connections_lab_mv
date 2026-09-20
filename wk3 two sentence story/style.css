@@ -1,0 +1,92 @@
+.manufacturing-consent-regular {
+    font-family: "Manufacturing Consent", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.jacquard-12-charted-regular {
+    font-family: "Jacquard 12 Charted", system-ui;
+    font-weight: 400;
+    font-style: normal;
+}
+
+h1 {
+    background-color: rgb(35, 39, 42);
+    color: rgb(133, 9, 9);
+    border-color: black;
+    font-family: "Manufacturing Consent";
+    font-size: 78px;
+    padding: 30px;
+    text-align: center;
+    border-radius: 30px;
+    border-style: dotted;
+    border-width: 10px;
+}
+
+body {
+    color: rgb(35, 39, 42);
+    font-family: "Jacquard 12 Charted";
+    text-align: center;
+    font-size: 48px;
+    margin: 1%;
+    padding: 0;
+    background-color: rgb(133, 9, 9);
+}
+
+
+.flex_box_row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 20px;
+    border-radius: 2%;
+    gap: 20px;
+}
+
+.flex_box_row_child {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 0;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+.places_img {
+    width: 100%;
+    opacity: 0%;
+    display: inline-block;
+    transition: opacity 0.8s ease-in-out;
+}
+/* 
+.flex_box_row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content:center;
+    align-items:flex-start;
+    margin: 20px;
+}
+
+
+.flex_box_row_child {
+    display: flex;
+    flex-direction: column;
+    flex-basis: 25%;
+}
+.flex_box_row_child_sub {
+    flex-wrap: wrap;
+} */
+
+img {
+    max-width: 100%;
+    max-height: fit-content;
+    margin:4px;
+    position: absolute;
+}
+
+footer {
+    font-size: small;
+}
+
