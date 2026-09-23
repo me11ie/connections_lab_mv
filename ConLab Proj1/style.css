@@ -1,0 +1,63 @@
+.engagement-regular {
+    font-family: "Engagement", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body,
+html {
+    padding: 0;
+    margin: 0;
+    background-color: #786BB0;
+    color: #e88fc1;
+    height: 100%;
+    font-family: Engagement;
+    font-size: 34pt;
+}
+
+.rpicker {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    margin: 8px;
+}
+
+.rpicker__title {
+    margin: 10px;
+    font-size: 72pt;
+}
+
+.rpicker__name {
+    font-size: 108px;
+    margin: 18px 0;
+    text-transform: uppercase;
+    font-weight: 900;
+}
+
+.rpicker__dropdowns {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+}
+
+.rpicker__field {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+select {
+    border: 2px solid #e88fc1;
+    background: #3d5288;
+    padding: 10px;
+    transition: 0.4s;
+}
+
+.custom-select {
+    &,
+    &::picker(select) {
+        appearance: base-select;
+    }
+}
