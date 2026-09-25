@@ -1,0 +1,195 @@
+.engagement-regular {
+    font-family: "Engagement", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.explora-regular {
+    font-family: "Explora", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+body {
+    background-color: #786BB0;
+    color: #e88fc1;
+    font-family: "Engagement";
+    font-size: 34pt;
+}
+
+
+/* curved text css */
+.title-svg {
+    width: 85%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.title-svg text {
+    font-family: "Engagement", cursive;
+    font-size: 64pt;
+    font-weight: 800;
+    fill: #FFff;
+}
+.title-svg path {
+    fill: none;
+    /* removes the black blob */
+    stroke: none;
+    /* hide the guide line; use a color here to see it while testing */
+}
+
+
+
+
+/* general layout */
+section {
+    width: 100%;
+}
+
+.page_section {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+/* 
+feelings setup */
+.feelings_title {
+    justify-self: center;
+    justify-content: center;
+    align-items: center;
+    margin: 2px;
+    font-size: 56pt;
+}
+
+.feelings_display {
+    font-family: "Explora";
+    width: 95%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-self: center;
+    justify-content: space-around;
+}
+
+.feelings_contain {
+    display: flex;
+    width: 30%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.feelings_input {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-left: 7px;
+    margin-right: 7px;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.feelings_input img {
+    max-width: 100%;
+    height: auto;
+}
+
+.feelings_entry {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+    background-image: url(test\ illustration.jpg);
+}
+
+.feelings_entry_child {
+    min-width: 26%;
+    margin: 10px;
+    border-radius: 6px;
+    border-width: 4px;
+    border-style:double;
+    justify-content: center;
+    text-align: center;
+    border-color:#e88fc1;
+    background-color: #FFff;
+    color: #3d5288;
+}
+
+/* selection + input layout */
+
+.feelings_input_dropdown {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+}
+
+.feelings_input_field {
+
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+
+/* interactives formatting & js communication */
+
+/* drop down formatting & setup */
+select {
+    border: 2px solid #e88fc1;
+    background: #3d5288;
+    padding: 10px;
+    transition: 0.4s;
+}
+
+.custom-select {
+    &,
+    &::picker(select) {
+        appearance: base-select;
+    }
+}
+
+
+/* text animation */
+.demo-text {
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: -0.02em;
+}
+
+.text-typing {
+    overflow:auto;
+    border-right: 3px solid #6366f1;
+    white-space: nowrap;
+    animation: typing 3s steps(20), blink 0.5s step-end infinite alternate;
+    width: 100vh;
+}
+
+.demo-text span {
+    display: inline-block;
+}
+
+@keyframes typing {
+
+    0%,
+    90%,
+    100% {
+        width: 0;
+    }
+
+    30%,
+    60% {
+        width: 100%;
+    }
+}
+
+@keyframes blink {
+    50% {
+        border-color: transparent;
+    }
+}
