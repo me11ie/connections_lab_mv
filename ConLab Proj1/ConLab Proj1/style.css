@@ -1,3 +1,5 @@
+/* fonts importing */
+
 .engagement-regular {
     font-family: "Engagement", cursive;
     font-weight: 400;
@@ -10,8 +12,16 @@
     font-style: normal;
 }
 
+.niconne-regular {
+    font-family: "Niconne", cursive;
+    font-weight: 400;
+    font-style: normal;
+}
+/* main page setup */
+
 body {
-    background-color: #786BB0;
+    background: #786BB0;
+    background: radial-gradient(circle, rgba(120, 107, 176, 1) 40%, rgba(153, 187, 187, 0.96) 96%);
     color: #e88fc1;
     font-family: "Engagement";
     font-size: 34pt;
@@ -56,10 +66,11 @@ section {
 /* 
 feelings setup */
 .feelings_title {
+    font-family: "Niconne";
     justify-self: center;
+    width: 80vw;
     justify-content: center;
     align-items: center;
-    margin: 2px;
     font-size: 56pt;
 }
 
@@ -98,16 +109,25 @@ feelings setup */
 }
 
 .feelings_entry {
+    width: 40vw;
+    height: 85vh;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     flex-wrap: wrap;
-    justify-content: space-evenly;
+    justify-content: center;
     align-items: center;
-    background-image: url(test\ illustration.jpg);
+    background-image: url(journal_background.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 12px;
 }
 
 .feelings_entry_child {
     min-width: 26%;
+    max-width: 75%;
+    min-height: 10%;
+    max-height: 20%;
     margin: 10px;
     border-radius: 6px;
     border-width: 4px;
@@ -115,8 +135,31 @@ feelings setup */
     justify-content: center;
     text-align: center;
     border-color:#e88fc1;
-    background-color: #FFff;
+    background-color: #f8ecea;
     color: #3d5288;
+    transform: translateY(20vh);
+}
+
+#feeling_1{
+    cursor: pointer;
+}
+
+/* 
+journal background animate */
+#feelings_entry_animate {
+    animation-name: riseJournal;
+    animation-delay: 2s;
+    animation-duration: 10s;
+}
+
+@keyframes riseJournal {
+    0% {
+        transform: translateY(0vh);
+    }
+
+    100% {
+        transform: translateY(-40vh);
+    }
 }
 
 /* selection + input layout */
@@ -151,45 +194,5 @@ select {
     &,
     &::picker(select) {
         appearance: base-select;
-    }
-}
-
-
-/* text animation */
-.demo-text {
-    font-size: 2.5rem;
-    font-weight: 800;
-    letter-spacing: -0.02em;
-}
-
-.text-typing {
-    overflow:auto;
-    border-right: 3px solid #6366f1;
-    white-space: nowrap;
-    animation: typing 3s steps(20), blink 0.5s step-end infinite alternate;
-    width: 100vh;
-}
-
-.demo-text span {
-    display: inline-block;
-}
-
-@keyframes typing {
-
-    0%,
-    90%,
-    100% {
-        width: 0;
-    }
-
-    30%,
-    60% {
-        width: 100%;
-    }
-}
-
-@keyframes blink {
-    50% {
-        border-color: transparent;
     }
 }

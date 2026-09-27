@@ -4,13 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fairy Tale Feelings Journal</title>
+    <title>Fairy Tale Frankenstein</title>
     <link href="https://fonts.googleapis.com/css2?family=Engagement&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Explora&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Niconne&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    </link>
 </head>
 
 
@@ -20,7 +22,7 @@
     <path id="curve" d="M10,80 Q132,180 255,80 T500,80 T745,80 T990,80" />
     <text>
         <textPath href="#curve" startOffset="50%" text-anchor="middle" textLength="960" lengthAdjust="spacing">
-            Your Feelings: A Fairy Tale
+            From Feelings: A Fairy Tale
         </textPath>
     </text>
 </svg>
@@ -28,7 +30,8 @@
 <!-- feelings input & description section -->
 <section>
     <div class="feelings_title">
-        <p>Make a feelings journal with fairy tale excerpts</p>
+        <p>Patch together a fairy tale using emotion-coded excerpts from:
+        Hans Christian Anderson, Beatrix Potter, and The Grimm brothers</p> 
         </div>
 
 
@@ -37,7 +40,7 @@
         lefthand feelings control -->
         <div class = "feelings_contain">
 
-            <div class="feelings_iput">
+            <div class="feelings_input">
             <div class="feelings_input_dropdown">
                 <div class="feelings_input_field">
                     <label for="feelings">How are you feeling?</label>
@@ -53,19 +56,19 @@
                 </div>
             </div>
 
-            <div class="feelings_iput">
+            <div class="feelings_input">
                 <div class="feelings_input_field">
-                    <label for="dropdown-2">Intensity?</label>
-                    <select name="dropdown-2" id="dropdown-2">
+                    <label for="dropdown-2">Mood</label>
+                    <select name="dropdown-2" id="mood">
                         <option value="" disabled selected>Choose an option</option>
-                        <option value="mild">Mild</option>
-                        <option value="medium">Medium</option>
-                        <option value="hot">Hot</option>
+                        <option value="H.C. Andersen">Classic</option>
+                        <option value="Beatrix Potter">Quaint</option>
+                        <option value="Grimm's">Dark</option>
                     </select>
                 </div>
         </div>
 
-    <div class="feelings_iput">
+    <div class="feelings_input">
         <div class="feelings_input_field">
             <label for="dropdown-3">Mode of Expression?</label>
             <select name="dropdown-3" id="dropdown-3">
@@ -80,10 +83,16 @@
 
 <!-- center image appear -->
  <div class = "feelings_contain">
-        <div class = "feelings_entry">
-            <div class = "feelings_entry_child"> feeling 1</div>
-            <div class="feelings_entry_child"> feeling 2</div>
-            <div class="feelings_entry_child"> feeling 3 </div>
+        <div id = "feelings_entry_animate" class = "feelings_entry">
+            <div class = "feelings_entry_child" id = 'fill_area'> 
+                <span id='feeling_1' > click here </span>
+            </div>
+            <div class="feelings_entry_child" id='fill_area'>
+                <span id='feeling_1'> click here </span>
+            </div>
+            <div class="feelings_entry_child" id='fill_area'>
+                <span id='feeling_1'> click here </span>
+            </div>
         </div>
 </div>
 
@@ -95,7 +104,7 @@
         More vibe options
     </div>
 </div>
-
+</div>
 
 </section>
 
