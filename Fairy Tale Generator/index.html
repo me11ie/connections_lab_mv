@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fairy Tale Frankenstein</title>
+    <link href="https://fonts.googleapis.com/css2?family=Engagement&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Explora&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Niconne&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+
+<body>
+    <!-- title waved text -->
+    <!-- SAMPLE CODE found online (documentation link) - specific d values calculated with AI -->
+    <svg class="title-svg" viewBox="0 -40 1000 200" xmlns="http://www.w3.org/2000/svg">
+        <path id="curve" d="M10,80 Q132,180 255,80 T500,80 T745,80 T990,80" />
+        <text>
+            <textPath href="#curve" startOffset="50%" text-anchor="middle" textLength="960" lengthAdjust="spacing">
+                From Feelings: A Fairy Tale
+            </textPath>
+        </text>
+    </svg>
+
+    <!-- page description  -->
+    <section>
+        <div class="page_description">
+            <p>Patch together a fairy tale using emotion-coded excerpts from:<br>
+                Hans Christian Anderson, Beatrix Potter, and The Grimm brothers</p>
+        </div>
+
+
+        <!-- Actual Control PANEL, NEEDS titles added
+        <div class = "picker_class">
+            <div class = "picker_class_emotion_child">
+            <button class = "picker_button_emotion" id = "happy_button" type="button" value="happy">happy</button>
+            <button class="picker_button_emotion" id="sad_button" type="button" value="sad">sad</button>
+            <button class="picker_button_emotion" id="fearful_button" type="button" value="fearful">fear</button>
+            <button class="picker_button_emotion" id="angry_button" type="button" value="angry_disgusted">angry</button>
+            <button class="picker_button_emotion" id="surprised_button" type="button" value="surprised">surprised</button> 
+            </div>
+
+            <div class = "picker_class_style_child">
+                <button class = "picker_button_style" id = "Hans_select" type="button" value="H.C. Andersen">classic</button>
+                <button class="picker_button_style" id="Beatrix_select" type="button" value="Beatrix Potter">homey</button>
+                <button class="picker_button_style" id="Grimm_selected" type="button" value="Grimm's">dark</button>
+            </div>
+        </div>
+    </div> -->
+
+
+<!-- DROPDOWN Control PANEL-->
+    <div class="dropdown_area">
+            <!-- SET LINE TO WORK ON (1-3) -->
+             <!-- TO DO: ADD CSS ANIMATION SO THAT WHEN LINE CHOICE CHANGES, the BUTTON MOVES TO NEXT TO THAT LINE -->
+             <!-- LINE SHOULD COME FIRST SINCE IT ALIGNS WITH BUTTON TEXT -->
+            <!-- interaction design: add symbols/icons for "first, second third" in drop down and then again in design as visual cues to user for what the dropdown controls -->
+            <div class="dropdown_input">
+                <div class="dropdown_field">
+                    <label for="line">Choose line</label>
+                    <select name="line" id="line">
+                        <option value="" disabled selected>Choose a line</option>
+                        <option value="0">first</option>
+                        <option value="1">second</option>
+                        <option value="2">third</option>
+                    </select>
+                </div>
+            </div>
+
+
+        <!-- SET EMOTION -->
+                <div class="dropdown_input">
+                    <div class="dropdown_field">
+                        <label for="emotion">Emotion</label>
+                        <select name="emotion" id="emotion">
+                            <option value="" disabled selected>Choose a feeling</option>
+                            <option value="angry_disgusted">angry</option>
+                            <option value="fearful">fearful</option>
+                            <option value="happy">happy</option>
+                            <option value="sad">sad</option>
+                            <option value="surprised">surprised</option>
+                        </select>
+                    </div>
+                </div>
+        
+                <!-- SET STYLE (AUTHOR) -->
+                <div class="dropdown_input">
+                    <div class="dropdown_field">
+                        <label for="style">Style</label>
+                        <select name="style" id="style">
+                            <option value="" disabled selected>Choose an option</option>
+                            <option value="H.C. Andersen">Classic</option>
+                            <option value="Beatrix Potter">Quaint</option>
+                            <option value="Grimm's">Dark</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+    
+<!-- BUTTON CONTROL -->
+       <div class="story_button" id="button_move">
+         <button class="pink_button" id="set-button" type="button">Find lines</button>
+       </div>
+
+
+
+
+            <div class="story_master" id = "story_rise">
+                <!-- <img class = "story_background" src="zwidebackground.jpeg" alt="background image of fairy tale setting"> -->
+                <div class="story_excerpts_main">
+                    <div class="story_excerpt_indiv">
+                        <span id='excerpt_1'> Select "first" from the dropdown to update this line </span>
+                    </div>
+                    <div class="story_excerpt_indiv">
+                        <span id='excerpt_2'> Select "second" from the dropdown to update this line</span>
+                    </div>
+                    <div class="story_excerpt_indiv">
+                        <span id='excerpt_3'> Select "third" from the dropdown to update this line </span>
+                    </div>
+                </div>
+            </div>
+
+<!-- Footer -->
+    <p>Resource: Dissertation by Cecilia Ovesdotter Alm: <a
+        href="https://people.rc.rit.edu/coagla/affectdata/index.html">dataset</a>
+    </p>
+
+    </section>
+
+
+
+    <!-- link javascript -->
+    <script src="script.js"></script>
+
+</body>
+
+</html>
